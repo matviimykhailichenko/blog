@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matvii Mykhailichenko</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="favicon.ico?v=2" type="image/x-icon"> <!-- Link to your favicon here -->
+</head>
+<body>
+    <header>
+        <h1>Matvii Mykhailichenko</h1>
+    </header>
+    <div class="tab">
+        <button class="tablinks" onclick="openTab(event, 'Main')">Main</button>
+        <button class="tablinks" onclick="openTab(event, 'Research')">Research</button>
+        <button class="tablinks" onclick="openTab(event, 'Portfolio')">Portfolio</button>
+        <button class="tablinks" onclick="openTab(event, 'Contact')">Contact</button>
+    </div>
+    <section id="Main" class="tabcontent">
+        <p>Hi, I'm the guy whose name is on the top of the site. I'm a bioinformatician.</p>
+        <h2>Resume</h2>
+        <p><a href="CV.pdf" target="_blank">Download my CV</a></p>
+    </section>
+    <section id="Research" class="tabcontent">
+        <h2>Research</h2>
+        <div id="research-container">
+            <!-- Content will be loaded dynamically by JavaScript -->
+        </div>
+    </section>
+    <section id="Portfolio" class="tabcontent">
+        <h2>Portfolio</h2>
+        <div id="portfolio-container">
+            <!-- Content will be loaded dynamically by JavaScript -->
+        </div>
+    </section>
+    <section id="Contact" class="tabcontent">
+        <h2>Contact</h2>
+        <ul class="contact-list">
+            <li>
+                <a href="mailto:matviimykhailichenko@gmail.com">
+                    <img src="icons/mail.png" alt="Email" class="contact-icon"> matviimykhailichenko@gmail.com
+                </a>
+            </li>
+            <li>
+                <a href="https://www.linkedin.com/in/matvii-mykhailichenko-24246a273/" target="_blank">
+                    <img src="icons/linkedin.png" alt="LinkedIn" class="contact-icon"> LinkedIn
+                </a>
+            </li>
+            <li>
+                <a href="https://www.researchgate.net/profile/Matvii-Mykhailichenko" target="_blank">
+                    <img src="icons/researchgate.png" alt="ResearchGate" class="contact-icon"> ResearchGate
+                </a>
+            </li>
+        </ul>
+    </section>
+    <script src="script.js"></script>
+</body>
+</html>

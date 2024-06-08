@@ -1,0 +1,106 @@
+body {
+    font-family: 'Arial', sans-serif;
+    color: #444;
+    background-color: #fafafa; /* Light grey background for a softer look */
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333; /* Dark grey background */
+    color: #ffffff;
+    padding: 40px 20px; /* Increased padding for better spacing */
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* Subtle shadow for depth */
+}
+
+.tab {
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #333; /* Dark grey tab bar */
+}
+
+.tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-size: 17px;
+    color: #ddd;
+}
+
+.tab button:hover, .tab button.active {
+    background-color: #555;
+    color: #ffffff;
+}
+
+.tabcontent {
+    display: none;
+    padding: 20px;
+    border: none;
+    border-top: 5px solid #004165;
+    background-color: #ffffff; /* White background for content for readability */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Shadow for each tab content */
+}
+
+h1, h2 {
+    font-family: 'Helvetica', sans-serif;
+}
+
+a {
+    color: #0073e6;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    padding: 10px 0; /* Increased padding for better readability */
+    border-bottom: 1px solid #e1e1e1; /* Adds a line to separate items */
+}
+
+.contact-list {
+    list-style: none;
+    padding: 0;
+}
+
+.contact-list li {
+    margin-bottom: 10px;
+}
+
+.contact-icon {
+    width: 24px;  /* Fixed width */
+    height: 24px; /* Fixed height */
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+.publication {
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #e1e1e1;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.publication h3 {
+    margin-top: 0;
+}
+
+.publication a {
+    color: #0073e6;
+    text-decoration: none;
+}
+
+.publication a:hover {
+    text-decoration: underline;
+}
