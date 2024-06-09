@@ -104,3 +104,21 @@ li {
 .publication a:hover {
     text-decoration: underline;
 }
+
+.about-images {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.about-images img {
+    max-width: 100%;
+    height: auto;
+    margin: 10px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e1e1e1;
+}
+
+.about-images p {
+    text-align: left;
+    margin: 10px 0;
+}
