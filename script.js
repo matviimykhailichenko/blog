@@ -1,3 +1,7 @@
+document.addEventListener("DOMContentLoaded", function() {
+    loadResearchData();
+});
+
 function openTab(evt, tabName) {
     var i, tabcontent, tablinks;
     tabcontent = document.getElementsByClassName("tabcontent");
@@ -12,25 +16,26 @@ function openTab(evt, tabName) {
     evt.currentTarget.className += " active";
 }
 
-// Consolidate DOMContentLoaded into a single function
-document.addEventListener("DOMContentLoaded", function() {
-    // Load research data
+function loadResearchData() {
     fetch('research.json')
-    .then(response => response.json())
-    .then(data => {
-        const researchContainer = document.getElementById('research-container');
-        if (!researchContainer) {
-            console.error('No element with ID "research-container" found in the document.');
-            return;
-        }
-        // Clear existing content
-        researchContainer.innerHTML = '';
-        data.publications.forEach(pub => {
-            const pubElement = document.createElement('div');
-            pubElement.className = 'publication';
-            pubElement.innerHTML = `<h3>${pub.title}</h3><p>${pub.authors}</p><p>${pub.summary}</p><a href="${pub.link}" target="_blank">Read More</a><p>${pub.details}</p>`;
-            researchContainer.appendChild(pubElement);
-        });
-    })
-    .catch(error => console.error('Error loading research data:', error));
-});
+        .then(response => response.json())
+        .then(data => {
+            const container = document.querySelector('.research-container');
+            data.publications.forEach(pub => {
+                const pubDiv = document.createElement('div');
+                pubDiv.className = 'research-item';
+                const imageUrl = pub.image || 'icons/image_placeholder.png';
+                pubDiv.innerHTML = `
+                    <img src="${imageUrl}" alt="Research image"> <!-- Research image -->
+                    <div class="research-item-content">
+                        <h3>${pub.title}</h3>
+                        <p><strong>Authors:</strong> ${pub.authors}</p>
+                        <p>${pub.details}</p>
+                        <a href="${pub.link}" target="_blank">Read More</a>
+                    </div>
+                `;
+                container.appendChild(pubDiv);
+            });
+        })
+        .catch(error => console.error('Error loading research data:', error));
+}

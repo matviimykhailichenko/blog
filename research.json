@@ -5,28 +5,32 @@
       "authors": "Nadiia Kasianchuk, Yevhenii Kukuruza, Vladyslav Ostash, Anastasiia Boshtova, Dmytro Tsvyk and Matvii Mykhailichenko",
       "summary": "",
       "link": "https://icaiit.org/paper.php?paper=11th_ICAIIT_2/2_4",
-      "details": "Proceedings of International Conference on Applied Innovation in IT. Volume 11, Issue 2, pp. 59-65. (DOI:10.25673/112994). First and last author contributed equally."
+      "details": "Proceedings of International Conference on Applied Innovation in IT. Volume 11, Issue 2, pp. 59-65. (DOI:10.25673/112994). First and last author contributed equally.",
+      "image": "Pictures/HVG_Identification_Methods.png"
     },
     {
       "title": "Review of cuproptosis-related lncRNA's potential as cancer biomarkers",
       "authors": "Matvii Mykhailichenko, Nadiia Kasianchuk",
       "summary": "",
       "link": "https://www.international-student-congress.info/_files/ugd/c8868a_889c0d1f7a2541028c1fc9bde9dfbe59.pdf",
-      "details": "Abstract book of the 9th International Student Congress, Graz, Austria."
+      "details": "Abstract book of the 9th International Student Congress, Graz, Austria.",
+      "image": "Pictures/cuproptosis_lnRNA_cancer_biomarkers.png"
     },
     {
       "title": "Designing a ceRNA Network and Discovering Hub Genes in Breast Cancer: A Comprehensive Approach",
       "authors": "M. Mykhailichenko, R. Dzykirba, V. Ostash, N. Kasianchuk",
       "summary": "",
       "link": "Files/Poster.pdf",
-      "details": "In progress."
+      "details": "In progress.",
+      "image": "Pictures/ceRNA_Network_Hub_Genes_Breast_Cancer.png"
     },
     {
       "title": "Developing Bioinformatics Capacities in Eastern Europe",
       "authors": "S. Mangul, N. Kasianchuk, M. Mykhailichenko, T. Oleksyk",
       "summary": "",
       "link": "",
-      "details": "In progress."
+      "details": "In progress.",
+      "image": "Pictures/Bioinformatics_Capacities_Eastern_Europe.png"
     }
   ]
 }
