@@ -1,0 +1,32 @@
+
+/* General styling for better readability */
+body {
+    font-family: 'Arial', sans-serif;
+    color: #444;
+    background-color: #ffffff;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2 {
+    font-family: 'Helvetica', sans-serif;
+}
+
+a {
+    color: #0073e6;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    padding: 10px 0;
+    border-bottom: 1px solid #e1e1e1;
+}
