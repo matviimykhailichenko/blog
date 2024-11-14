@@ -8,7 +8,7 @@
     <style>
         /* Previous styles remain the same */
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
-        
+
         * {
             margin: 0;
             padding: 0;
@@ -86,6 +86,36 @@
             max-width: 1200px;
             margin: 0 auto;
             animation: fadeIn 0.5s ease;
+        }
+
+        .tab {
+            display: flex;  /* Arrange buttons in a row */
+            justify-content: center;  /* Center align the buttons */
+            gap: 1rem;  /* Space between buttons */
+            padding: 1rem 0;  /* Add padding around the buttons */
+            background: rgba(15, 23, 42, 0.9);  /* Background color */
+            backdrop-filter: blur(10px);  /* Blur effect behind the tab container */
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);  /* Light bottom border */
+        }
+
+        .tab button {
+            padding: 0.75rem 2rem;  /* Add padding inside each button */
+            border: none;  /* Remove default border */
+            background: rgba(255, 255, 255, 0.1);  /* Light background */
+            color: #e2e8f0;  /* Text color */
+            font-size: 1rem;  /* Font size */
+            border-radius: 0.5rem;  /* Rounded corners */
+            cursor: pointer;  /* Pointer cursor for interactivity */
+            transition: all 0.3s ease;  /* Smooth transition effect */
+        }
+
+        .tab button:hover {
+            background: rgba(255, 255, 255, 0.2);  /* Slightly darker background on hover */
+        }
+
+        .tab button:focus {
+            outline: none;  /* Remove focus outline */
+            box-shadow: 0 0 0 2px rgba(96, 165, 250, 0.6);  /* Blue border on focus */
         }
 
         @keyframes fadeIn {
@@ -169,7 +199,7 @@
             .tab {
                 flex-direction: column;
             }
-            
+
             h1 {
                 font-size: 2rem;
             }
@@ -180,7 +210,7 @@
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2rem;
             padding: 1rem;
-        }   
+        }
 
         .project-card {
             background: rgba(255, 255, 255, 0.05);
@@ -272,9 +302,9 @@
         </header>
 
         <div class="tab">
-            <button class="tablinks active" onclick="openTab(event, 'About')">About</button>
-            <button class="tablinks" onclick="openTab(event, 'Projects')">Projects</button>
-            <button class="tablinks" onclick="openTab(event, 'Contact')">Contact</button>
+            <button onclick="window.location.href='about.html'">About</button>
+            <button onclick="window.location.href='projects.html'">Projects</button>
+            <button onclick="window.location.href='contact.html'">Contact</button>
         </div>
 
         <section id="About" class="tabcontent" style="display: block;">
@@ -298,38 +328,6 @@
                         I am offering free mentoring sessions for Ukrainians interested in bioinformatics. If you would like to schedule a session, please reach out to me via email.
                     </p>
                 </div>
-            </div>
-        </section>
-
-        <section id="Projects" class="tabcontent">
-            <div class="projects-grid" id="projects-container">
-                <div class="loader"></div>
-            </div>
-        </section>
-
-        <section id="Contact" class="tabcontent">
-            <div class="contact-container">
-                <h2>Get in Touch</h2>
-                <ul class="contact-list">
-                    <li>
-                        <a href="mailto:matvii.mykhailichenko@medunigraz.at">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
-                            E-mail
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://www.linkedin.com/in/matvii-mykhailichenko-24246a273/" target="_blank">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
-                            LinkedIn
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://www.researchgate.net/profile/Matvii-Mykhailichenko" target="_blank">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path></svg>
-                            ResearchGate
-                        </a>
-                    </li>
-                </ul>
             </div>
         </section>
     </div>
@@ -427,7 +425,7 @@
         function createProjectCard(project) {
             const card = document.createElement('div');
             card.className = 'project-card';
-            
+
             const cardContent = `
                 <img src="${project.image}" alt="${project.title}" class="project-image">
                 <div class="project-content">
@@ -446,7 +444,7 @@
                     ` : ''}
                 </div>
             `;
-            
+
             card.innerHTML = cardContent;
             return card;
         }
@@ -455,7 +453,7 @@
         function loadProjects() {
             const container = document.getElementById('projects-container');
             container.innerHTML = ''; // Clear loader
-            
+
             projectsData.publications.forEach(project => {
                 container.appendChild(createProjectCard(project));
             });
