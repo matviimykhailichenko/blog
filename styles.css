@@ -1,366 +1,200 @@
-/* Unified Style Sheet for Matvii Mykhailichenko's Website */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
-
-/* Reset and Base Styles */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Inter', sans-serif;
+:root {
+    --gh-bg: #0d1117;
+    --gh-bg-secondary: #161b22;
+    --gh-border: #30363d;
+    --gh-text: #c9d1d9;
+    --gh-text-secondary: #8b949e;
+    --gh-link: #58a6ff;
+    --gh-btn-bg: #21262d;
+    --gh-btn-border: #363b42;
+    --gh-btn-hover: #30363d;
+    --gh-header-bg: #161b22;
 }
 
 body {
-    background: #0f172a;
-    color: #e2e8f0;
-    line-height: 1.6;
+    background-color: var(--gh-bg);
+    color: var(--gh-text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    margin: 0;
+    line-height: 1.5;
 }
 
-a {
-    color: #60a5fa;
-    text-decoration: none;
-    transition: all 0.3s ease;
-}
+a { text-decoration: none; color: var(--gh-link); }
+a:hover { text-decoration: underline; }
 
-a:hover {
-    text-decoration: underline;
-}
-
-h1, h2, h3, h4, h5, h6 {
-    margin-bottom: 1rem;
-    font-weight: 600;
-    line-height: 1.2;
-}
-
-h1 {
-    font-size: 2.5rem;
-    font-weight: 700;
-    background: linear-gradient(45deg, #60a5fa, #34d399);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    margin-bottom: 1rem;
-}
-
-h2 {
-    font-size: 2rem;
-    color: #e2e8f0;
-    margin-bottom: 1.5rem;
-}
-
-h3 {
-    font-size: 1.5rem;
-    color: #e2e8f0;
-    margin-bottom: 1rem;
-    margin-top: 1.5rem;
-}
-
-p {
-    margin-bottom: 1rem;
-    color: #94a3b8;
-}
-
-ul {
-    list-style: disc;
-    margin-left: 1.5rem;
-    margin-bottom: 1.5rem;
-    color: #94a3b8;
-}
-
-li {
-    margin-bottom: 0.5rem;
-}
-
-/* Layout Elements */
-#particles-js {
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
-}
-
-.content {
-    position: relative;
-    z-index: 2;
-}
-
-/* Header */
-header {
-    padding: 2rem;
-    text-align: center;
-    background: rgba(15, 23, 42, 0.9);
-    backdrop-filter: blur(10px);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    position: sticky;
-    top: 0;
-    z-index: 10;
-}
-
-/* Navigation Tabs */
-.tab {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-    padding: 1rem 0;
-    background: rgba(15, 23, 42, 0.9);
-    backdrop-filter: blur(10px);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.tab button {
-    padding: 0.75rem 2rem;
-    border: none;
-    background: rgba(255, 255, 255, 0.1);
-    color: #e2e8f0;
-    font-size: 1rem;
-    border-radius: 0.5rem;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-.tab button:hover {
-    background: rgba(255, 255, 255, 0.2);
-}
-
-.tab button:focus {
-    outline: none;
-    box-shadow: 0 0 0 2px rgba(96, 165, 250, 0.6);
-}
-
-.tab button.active {
-    background: #60a5fa;
-    color: #0f172a;
-}
-
-/* Content Sections */
-.tabcontent {
-    display: block;
-    padding: 2rem;
-    max-width: 1200px;
+.container {
+    max-width: 980px; /* GitHub's standard width */
     margin: 0 auto;
-    animation: fadeIn 0.5s ease;
+    padding: 0 16px;
 }
 
-/* About Section */
-.about-container {
+/* --- Navigation --- */
+.gh-header {
+    background-color: var(--gh-header-bg);
+    padding: 16px 0;
+    border-bottom: 1px solid var(--gh-border);
+    margin-bottom: 24px;
+}
+
+.repo-breadcrumb {
+    font-size: 20px;
+    color: var(--gh-link);
     display: flex;
-    flex-direction: column;
-    gap: 2rem;
+    align-items: center;
+    gap: 8px;
 }
 
-.about-section {
+.repo-breadcrumb i { color: var(--gh-text-secondary); font-size: 16px; }
+.repo-breadcrumb strong { font-weight: 600; }
+.repo-breadcrumb .label {
+    border: 1px solid var(--gh-border);
+    border-radius: 20px;
+    padding: 2px 10px; /* Refined pill shape */
+    font-size: 12px;
+    color: var(--gh-text-secondary);
+    font-weight: 500;
+    margin-left: 8px;
+}
+
+/* --- Tabs --- */
+.gh-tabs {
     display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-    padding: 1.5rem;
-    background: rgba(255, 255, 255, 0.05);
-    border-radius: 1rem;
+    gap: 8px; /* Spacing between tabs */
+    border-bottom: 1px solid var(--gh-border);
+    margin-bottom: 24px;
 }
 
-.about-text {
-    font-size: 1.2rem;
-    line-height: 1.7;
-    color: #94a3b8;
-}
-
-.about-images {
-    width: 100%;
-    height: 300px;
-    object-fit: cover;
-    border-radius: 1rem;
-    transition: transform 0.3s ease;
-}
-
-.about-images:hover {
-    transform: scale(1.02);
-}
-
-.mentoring-note {
-    padding: 1.5rem;
-    background: rgba(96, 165, 250, 0.1);
-    border-left: 4px solid #60a5fa;
-    border-radius: 0.5rem;
-    margin-top: 1rem;
-}
-
-/* Projects Grid */
-.projects-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-    padding: 1rem;
-}
-
-.project-card {
-    background: rgba(255, 255, 255, 0.05);
-    border-radius: 1rem;
-    overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    height: 100%;
+.tab {
+    padding: 8px 16px;
+    color: var(--gh-text);
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid transparent; /* Invisible bottom border for layout */
     display: flex;
-    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    transition: border-bottom 0.2s;
 }
 
-.project-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+.tab i { color: var(--gh-text-secondary); }
+
+.tab:hover {
+    background-color: rgba(177, 186, 196, 0.12); /* Subtle hover */
+    border-radius: 6px 6px 0 0;
+    text-decoration: none;
 }
 
-.project-image {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-}
-
-.project-content {
-    padding: 1.5rem;
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-}
-
-.project-title {
-    font-size: 1.25rem;
+.tab.active {
     font-weight: 600;
-    color: #e2e8f0;
-    margin-bottom: 0.5rem;
+    border-bottom: 2px solid #f78166; /* GitHub orange accent */
 }
 
-.project-authors {
-    font-size: 0.9rem;
-    color: #94a3b8;
-    margin-bottom: 0.5rem;
+.tab.active i { color: var(--gh-text); }
+
+/* --- File Explorer (Index) --- */
+.file-explorer {
+    border: 1px solid var(--gh-border);
+    border-radius: 6px;
+    background-color: var(--gh-bg);
+    margin-bottom: 24px;
+    overflow: hidden; /* Ensures corners clip */
 }
 
-.project-details {
-    font-size: 0.9rem;
-    color: #64748b;
-    flex-grow: 1;
-}
-
-.project-link {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    padding: 0.5rem 1rem;
-    background: rgba(96, 165, 250, 0.1);
-    color: #60a5fa;
-    text-decoration: none;
-    border-radius: 0.5rem;
-    transition: background 0.3s ease;
-    margin-top: auto;
-}
-
-.project-link:hover {
-    background: rgba(96, 165, 250, 0.2);
-    text-decoration: none;
-}
-
-/* Project Detail Pages */
-.project-page-content {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    padding: 1.5rem;
-    background: rgba(255, 255, 255, 0.05);
-    border-radius: 1rem;
-    margin-bottom: 2rem;
-}
-
-.back-button {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    padding: 0.5rem 1rem;
-    background: rgba(96, 165, 250, 0.1);
-    color: #60a5fa;
-    text-decoration: none;
-    border-radius: 0.5rem;
-    transition: background 0.3s ease;
-    width: fit-content;
-    margin-bottom: 1.5rem;
-}
-
-.back-button:hover {
-    background: rgba(96, 165, 250, 0.2);
-    text-decoration: none;
-}
-
-/* Contact Section */
-.contact-container {
-    background: rgba(255, 255, 255, 0.05);
-    padding: 2rem;
-    border-radius: 1rem;
-}
-
-.contact-list {
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    margin-top: 1rem;
-}
-
-.contact-list a {
+.file-header {
+    background-color: var(--gh-bg-secondary);
+    padding: 16px;
+    border-bottom: 1px solid var(--gh-border);
     display: flex;
     align-items: center;
-    gap: 1rem;
-    color: #94a3b8;
-    text-decoration: none;
-    padding: 1rem;
-    background: rgba(255, 255, 255, 0.05);
-    border-radius: 0.5rem;
-    transition: all 0.3s ease;
+    gap: 12px;
+    font-size: 14px;
 }
 
-.contact-list a:hover {
-    background: rgba(255, 255, 255, 0.1);
-    transform: translateX(10px);
-    text-decoration: none;
-}
-
-/* Loading Animation */
-.loader {
-    border: 3px solid rgba(255, 255, 255, 0.1);
-    border-top: 3px solid #60a5fa;
+.avatar-small {
+    width: 24px;
+    height: 24px;
     border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    animation: spin 1s linear infinite;
-    margin: 2rem auto;
+    border: 1px solid var(--gh-border);
 }
 
-/* Animations */
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
+.file-row {
+    display: flex;
+    padding: 10px 16px;
+    border-top: 1px solid var(--gh-border);
+    font-size: 14px;
+    transition: background 0.1s;
+    cursor: pointer;
 }
 
-@keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
+.file-row:first-of-type { border-top: none; }
+.file-row:hover { background-color: var(--gh-bg-secondary); }
+
+.file-icon { color: var(--gh-text-secondary); width: 24px; text-align: center; margin-right: 10px; }
+.file-name { flex: 1; color: var(--gh-text); font-weight: 500; }
+.file-msg { flex: 2; color: var(--gh-text-secondary); }
+.file-date { color: var(--gh-text-secondary); text-align: right; font-size: 13px; }
+
+/* --- README / Contact Content --- */
+.readme-container {
+    border: 1px solid var(--gh-border);
+    border-radius: 6px;
+    margin-bottom: 40px;
 }
 
-/* Media Queries */
-@media (max-width: 768px) {
-    .tab {
-        flex-direction: column;
-        padding: 0.5rem;
-    }
-
-    .tab button {
-        width: 100%;
-        margin-bottom: 0.5rem;
-    }
-
-    h1 {
-        font-size: 2rem;
-    }
-
-    .tabcontent {
-        padding: 1rem;
-    }
-    
-    .projects-grid {
-        grid-template-columns: 1fr;
-    }
+.readme-header {
+    background-color: var(--gh-bg-secondary);
+    padding: 12px 16px;
+    border-bottom: 1px solid var(--gh-border);
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
 }
+
+.readme-content {
+    padding: 32px;
+    font-size: 16px;
+    color: var(--gh-text);
+}
+
+.readme-content h1 { border-bottom: 1px solid var(--gh-border); padding-bottom: 0.3em; font-size: 2em; margin-bottom: 16px; }
+.readme-content h2 { border-bottom: 1px solid var(--gh-border); padding-bottom: 0.3em; font-size: 1.5em; margin-top: 24px; margin-bottom: 16px; }
+.readme-content p { margin-bottom: 16px; }
+
+/* --- Projects / Repo List --- */
+.repo-list { display: flex; flex-direction: column; gap: 0; }
+.repo-item {
+    padding: 24px 0;
+    border-bottom: 1px solid var(--gh-border);
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.repo-title { font-size: 20px; font-weight: 600; color: var(--gh-link); }
+.repo-desc { color: var(--gh-text-secondary); margin: 8px 0 16px; font-size: 14px; width: 80%; }
+.repo-meta { display: flex; gap: 16px; font-size: 12px; color: var(--gh-text-secondary); align-items: center; }
+
+/* --- Buttons --- */
+.btn-gh {
+    background-color: var(--gh-btn-bg);
+    border: 1px solid var(--gh-btn-border);
+    color: var(--gh-text);
+    padding: 5px 16px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 500;
+    transition: 0.2s;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+}
+.btn-gh:hover { background-color: var(--gh-btn-hover); border-color: #8b949e; text-decoration: none; }
+.btn-primary { background-color: #238636; color: white; border: 1px solid rgba(240,246,252,0.1); }
+.btn-primary:hover { background-color: #2ea043; }
+
+/* Loader */
+.loader { border: 3px solid var(--gh-border); border-top: 3px solid var(--gh-link); border-radius: 50%; width: 24px; height: 24px; animation: spin 1s linear infinite; margin: 20px auto; }
+@keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }

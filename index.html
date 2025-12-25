@@ -3,48 +3,78 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Matvii Mykhailichenko | Diagnostics Bioinformatics</title>
+    <title>matviimykhailichenko / portfolio</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
-    <script src="script.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <div id="particles-js"></div>
-    <div class="content">
-        <header>
-            <h1>Matvii Mykhailichenko</h1>
-            <p style="color: #94a3b8;">Diagnostics Bioinformatician</p>
-        </header>
+    <header class="gh-header">
+        <div class="container">
+            <div class="repo-breadcrumb">
+                <i class="fa-solid fa-book-bookmark"></i>
+                <a href="index.html">matviimykhailichenko</a>
+                <span>/</span>
+                <a href="index.html"><strong>portfolio</strong></a>
+                <span class="label">Public</span>
+            </div>
+        </div>
+    </header>
 
-        <div class="tab">
-            <button onclick="window.location.href='index.html'">About</button>
-            <button onclick="window.location.href='projects.html'">Projects</button>
-            <button onclick="window.location.href='contact.html'">Contact</button>
+    <main class="container">
+        <nav class="gh-tabs">
+            <a href="index.html" class="tab active"><i class="fa-solid fa-code"></i> Code</a>
+            <a href="projects.html" class="tab"><i class="fa-solid fa-book-journal-whills"></i> Projects</a>
+            <a href="contact.html" class="tab"><i class="fa-regular fa-id-card"></i> Contact</a>
+        </nav>
+
+        <div class="file-explorer">
+            <div class="file-header">
+                <img src="https://github.com/matviimykhailichenko.png" alt="Profile" class="avatar-small">
+                <strong>matviimykhailichenko</strong>
+                <span style="color: #8b949e; margin-left: 8px;">Updated portfolio content</span>
+                <span style="flex:1;"></span>
+                <span style="color: #8b949e;">Latest commit 3 days ago</span>
+            </div>
+
+            <div class="file-row" onclick="window.location.href='projects.html'">
+                <div class="file-icon"><i class="fa-solid fa-folder" style="color: #54aeff;"></i></div>
+                <div class="file-name">projects</div>
+                <div class="file-msg">Add new research papers</div>
+                <div class="file-date">2 days ago</div>
+            </div>
+            <div class="file-row" onclick="window.location.href='contact.html'">
+                <div class="file-icon"><i class="fa-regular fa-file-lines"></i></div>
+                <div class="file-name">CONTACT.md</div>
+                <div class="file-msg">Update contact details</div>
+                <div class="file-date">1 week ago</div>
+            </div>
+            <div class="file-row">
+                <div class="file-icon"><i class="fa-regular fa-file-lines"></i></div>
+                <div class="file-name">README.md</div>
+                <div class="file-msg">Initial commit</div>
+                <div class="file-date">1 month ago</div>
+            </div>
         </div>
 
-        <section id="About" class="tabcontent">
-            <div class="about-container">
-                <div class="about-section">
-                    <p class="about-text">
-                        I am a diagnostics bioinformatician at the Medical University of Graz, Institute for Human Genetics. My work focuses on developing and implementing computational solutions for genetic diagnostics and research.
-                    </p>
-                    <img src="Pictures/meduni.jpg" alt="At Medical University of Graz" class="about-images">
-                </div>
-
-                <div class="about-section">
-                    <p class="about-text">
-                        Additionally, I am dedicated to advancing Ukrainian bioinformatics through the Bioinformatics for Ukraine society, working to build bridges between Ukrainian scientists and the international research community.
-                    </p>
-                    <img src="Pictures/ukraine.jpeg" alt="With Ukrainian colleagues" class="about-images">
-                </div>
-
-                <div class="mentoring-note">
-                    <p class="about-text">
-                        I am offering free mentoring sessions for Ukrainians interested in bioinformatics. If you would like to schedule a session, please reach out to me via email.
-                    </p>
-                </div>
+        <div class="readme-container">
+            <div class="readme-header">
+                <i class="fa-solid fa-list-ul"></i> README.md
             </div>
-        </section>
-    </div>
+            <article class="readme-content">
+                <h1>Matvii Mykhailichenko</h1>
+                <p>Diagnostics Bioinformatician at the <strong>Medical University of Graz</strong>, Institute for Human Genetics.</p>
+
+                <h2>About Me</h2>
+                <p>My work focuses on developing and implementing computational solutions for genetic diagnostics and research. I utilize various bioinformatics tools to analyze complex biological data.</p>
+                <p>I am also dedicated to advancing Ukrainian bioinformatics through the <strong>Bioinformatics for Ukraine</strong> society, helping to bridge the gap between Ukrainian scientists and the international research community.</p>
+
+                <div style="background: rgba(56, 139, 253, 0.1); border: 1px solid rgba(56, 139, 253, 0.4); border-radius: 6px; padding: 16px; margin-top: 24px;">
+                    <h3><i class="fa-solid fa-chalkboard-user"></i> Mentoring</h3>
+                    <p style="margin-bottom: 0;">I offer <strong>free mentoring sessions</strong> for Ukrainians interested in bioinformatics. Please check the <a href="contact.html">Contact</a> tab to get in touch.</p>
+                </div>
+            </article>
+        </div>
+    </main>
+    <script src="script.js"></script>
 </body>
 </html>

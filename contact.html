@@ -3,50 +3,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Matvii Mykhailichenko | Diagnostics Bioinformatics</title>
+    <title>Contact | matviimykhailichenko</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
-    <script src="script.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <div id="particles-js"></div>
-    <div class="content">
-        <header>
-            <h1>Matvii Mykhailichenko</h1>
-            <p style="color: #94a3b8;">Diagnostics Bioinformatician</p>
-        </header>
-
-        <div class="tab">
-            <button onclick="window.location.href='index.html'">About</button>
-            <button onclick="window.location.href='projects.html'">Projects</button>
-            <button onclick="window.location.href='contact.html'">Contact</button>
+    <header class="gh-header">
+        <div class="container">
+            <div class="repo-breadcrumb">
+                <i class="fa-solid fa-book-bookmark"></i>
+                <a href="index.html">matviimykhailichenko</a>
+                <span>/</span>
+                <a href="index.html"><strong>portfolio</strong></a>
+                <span class="label">Public</span>
+            </div>
         </div>
+    </header>
 
-        <section id="Contact" class="tabcontent">
-            <div class="contact-container">
-                <h2>Get in Touch</h2>
-                <ul class="contact-list">
+    <main class="container">
+        <nav class="gh-tabs">
+            <a href="index.html" class="tab"><i class="fa-solid fa-code"></i> Code</a>
+            <a href="projects.html" class="tab"><i class="fa-solid fa-book-journal-whills"></i> Projects</a>
+            <a href="contact.html" class="tab active"><i class="fa-regular fa-id-card"></i> Contact</a>
+        </nav>
+
+        <div class="readme-container">
+            <div class="readme-header">
+                <div style="flex: 1;">
+                    <i class="fa-regular fa-file-lines"></i> <strong>CONTACT.md</strong>
+                </div>
+                <div style="display: flex; gap: 8px;">
+                    <button class="btn-gh"><i class="fa-solid fa-pen"></i></button>
+                    <button class="btn-gh"><i class="fa-regular fa-trash-can"></i></button>
+                </div>
+            </div>
+
+            <article class="readme-content">
+                <h1>Get in Touch</h1>
+                <p>I am always open to discussing bioinformatics, research collaborations, or mentoring opportunities for Ukrainian students.</p>
+
+                <h2>Contact Information</h2>
+                <ul style="list-style-type: disc; margin-left: 20px;">
                     <li>
-                        <a href="mailto:matvii.mykhailichenko@medunigraz.at">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
-                            E-mail
-                        </a>
+                        <strong>Email:</strong>
+                        <a href="mailto:matvii.mykhailichenko@medunigraz.at">matvii.mykhailichenko@medunigraz.at</a>
+                        </li>
+                    <li>
+                        <strong>GitHub:</strong>
+                        <a href="https://github.com/matviimykhailichenko" target="_blank">github.com/matviimykhailichenko</a>
                     </li>
                     <li>
-                        <a href="https://www.linkedin.com/in/matvii-mykhailichenko-24246a273/" target="_blank">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
-                            LinkedIn
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://www.researchgate.net/profile/Matvii-Mykhailichenko" target="_blank">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path></svg>
-                            ResearchGate
-                        </a>
+                        <strong>Institution:</strong> Medical University of Graz, Institute for Human Genetics
                     </li>
                 </ul>
-            </div>
-        </section>
-    </div>
+
+                <h2>Office Hours</h2>
+                <p>Available by appointment for mentoring sessions.</p>
+
+                <div style="margin-top: 30px;">
+                    <a href="mailto:matvii.mykhailichenko@medunigraz.at" class="btn-gh btn-primary">
+                        <i class="fa-regular fa-envelope"></i> Send Email
+                    </a>
+                </div>
+            </article>
+        </div>
+    </main>
+    <script src="script.js"></script>
 </body>
 </html>

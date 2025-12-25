@@ -3,32 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Matvii Mykhailichenko | Diagnostics Bioinformatics</title>
+    <title>Projects | matviimykhailichenko</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
-    <script src="script.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <div id="particles-js"></div>
-    <div class="content">
-        <header>
-            <h1>Matvii Mykhailichenko</h1>
-            <p style="color: #94a3b8;">Diagnostics Bioinformatician</p>
-        </header>
+    <header class="gh-header">
+        <div class="container">
+            <div class="repo-breadcrumb">
+                <i class="fa-solid fa-book-bookmark"></i>
+                <a href="index.html">matviimykhailichenko</a>
+                <span>/</span>
+                <a href="index.html"><strong>portfolio</strong></a>
+                <span class="label">Public</span>
+            </div>
+        </div>
+    </header>
 
-        <div class="tab">
-            <button onclick="window.location.href='index.html'">About</button>
-            <button onclick="window.location.href='projects.html'">Projects</button>
-            <button onclick="window.location.href='contact.html'">Contact</button>
+    <main class="container">
+        <nav class="gh-tabs">
+            <a href="index.html" class="tab"><i class="fa-solid fa-code"></i> Code</a>
+            <a href="projects.html" class="tab active"><i class="fa-solid fa-book-journal-whills"></i> Projects</a>
+            <a href="contact.html" class="tab"><i class="fa-regular fa-id-card"></i> Contact</a>
+        </nav>
+
+        <div style="display: flex; gap: 8px; margin-bottom: 16px; border-bottom: 1px solid var(--gh-border); padding-bottom: 16px;">
+            <input type="text" placeholder="Find a project..." style="background: #0d1117; border: 1px solid #30363d; padding: 5px 12px; border-radius: 6px; color: white; width: 100%; max-width: 300px;">
+            <button class="btn-gh">Type: All</button>
+            <button class="btn-gh">Language: All</button>
         </div>
 
-        <section id="Projects" class="tabcontent">
-            <h2>Research Projects & Publications</h2>
-            <div class="projects-grid" id="projects-container">
-                <div class="loader"></div>
-                <!-- Project cards will be loaded here by JavaScript -->
-            </div>
-        </section>
-    </div>
+        <div id="projects-container" class="repo-list">
+            <div class="loader"></div>
+        </div>
+    </main>
+    <script src="script.js"></script>
 </body>
 </html>
