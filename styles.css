@@ -198,3 +198,18 @@ a:hover { text-decoration: underline; }
 /* Loader */
 .loader { border: 3px solid var(--gh-border); border-top: 3px solid var(--gh-link); border-radius: 50%; width: 24px; height: 24px; animation: spin 1s linear infinite; margin: 20px auto; }
 @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+
+.gh-limit-notice {
+    margin-top: 20px;
+    padding: 16px;
+    background-color: rgba(139, 148, 158, 0.1);
+    border: 1px solid var(--gh-border);
+    border-radius: 6px;
+    color: var(--gh-text-secondary);
+    font-size: 14px;
+}
+
+.gh-limit-notice i {
+    color: var(--gh-link);
+    margin-right: 8px;
+}
