@@ -37,7 +37,7 @@ async function loadCombinedProjects() {
     // 3. Load GitHub Repositories
     try {
         // Adding a cache-buster or check to handle API limits gracefully
-        const ghResponse = await fetch('https://api.github.com/users/matviimykhailichenko/repos?sort=updated');
+        const ghResponse = await fetch('https://api.github.com/search/issues?q=author:matviimykhailichenko+type:pr');
 
         if (!ghResponse.ok) {
             throw new Error('GitHub API Limit or Error');
